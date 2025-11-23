@@ -3,14 +3,33 @@
 {% block title %}Главная - TechShop{% endblock %}
 
 {% block content %}
-<!-- Герой -->
-<div class="hero-section text-center">
-    <div class="container">
-        <h1 class="display-4 fw-bold mb-3">Добро пожаловать в TechShop</h1>
-        <p class="lead mb-4">Лучшая техника по лучшим ценам</p>
-        <a href="{% url 'shop:product_list' %}" class="btn btn-light btn-lg">
-            <i class="bi bi-search"></i> Перейти в каталог
-        </a>
+<div class="hero-section position-relative overflow-hidden mb-5">
+    <div style="background: radial-gradient(circle at top right, #e0e7ff, transparent 40%); position: absolute; top:0; right:0; width: 100%; height: 100%; z-index: -1;"></div>
+    
+    <div class="container py-5">
+        <div class="row align-items-center py-5">
+            <div class="col-lg-6 text-center text-lg-start">
+                <span class="badge bg-primary bg-opacity-10 text-primary mb-3 px-3 py-2 rounded-pill">Новое поступление</span>
+                <h1 class="display-3 fw-bold mb-4 text-dark" style="letter-spacing: -1px;">
+                    Технологии <br>
+                    <span class="text-primary">вашей мечты</span>
+                </h1>
+                <p class="lead text-muted mb-5">
+                    Флагманские смартфоны, мощные ноутбуки и умные гаджеты с официальной гарантией и быстрой доставкой.
+                </p>
+                <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
+                    <a href="{% url 'shop:product_list' %}" class="btn btn-primary btn-lg px-5 py-3">
+                        В каталог <i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                    <a href="#popular" class="btn btn-outline-secondary btn-lg px-4 py-3 border-0 bg-white shadow-sm">
+                        Популярное
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 d-none d-lg-block text-center">
+                 <i class="bi bi-laptop text-primary opacity-25" style="font-size: 15rem;"></i>
+            </div>
+        </div>
     </div>
 </div>
 
